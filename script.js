@@ -10,12 +10,19 @@ const personalMOvieDB = {
 }
 
 
-const a = prompt('one watched films', "");
-b = prompt('how rating films', '');
-c = prompt('one watched films', "");
-d = prompt('how rating films', '');
 
-personalMOvieDB.movies[a] = b;
-personalMOvieDB.movies[c] = d;
+for(let i = 0; i < 2; i++) {
+    const a = prompt('one watched films', "");
+    b = prompt('how rating films', '');
 
+    if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMOvieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+
+    
+}
 console.log(personalMOvieDB);
