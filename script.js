@@ -11,7 +11,7 @@ const personalMOvieDB = {
 
 
 
-for(let i = 0; i < 2; i++) {
+for(let i = 0; i < 1; i++) {
     const a = prompt('one watched films', "");
     b = prompt('how rating films', '');
 
@@ -22,7 +22,15 @@ for(let i = 0; i < 2; i++) {
         console.log('error');
         i--;
     }
-
-    
 }
+if (personalMOvieDB.count < 10){
+    console.log('few movies watched')
+} else if (personalMOvieDB.count >= 10 && personalMOvieDB.count < 30) {
+    console.log('You are classic viewer');
+} else if (personalMOvieDB.count >= 30) {
+    console.log('You are cinephile')
+} else {
+    console.log('An error has occured')
+}
+
 console.log(personalMOvieDB);
